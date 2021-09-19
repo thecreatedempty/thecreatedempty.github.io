@@ -1,0 +1,36 @@
+<html>
+<head>
+	<title>Created Empty</title>
+	<style>
+		img {
+			float: left;
+			width:  100px;
+			height: 100px;
+			object-fit: cover;
+		}
+	</style>
+	<?php
+		function images($dir) {
+		$files1 = scandir($dir);
+		foreach ($files1 as $x=>$value)
+		{
+			if ($value == "." || $value == ".."){
+				unset($files1[$x]);
+			}
+		}
+		foreach ($files1 as $x=>$value)
+		{
+
+			echo "<li><img src=\"photos/$value\"></li>";
+		}
+		}
+	?>
+
+</head>
+
+<body>
+	<ul>
+		<?php images (https://github.com/thecreatedempty/images);?>
+	</ul>
+</body>
+</html>
