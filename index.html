@@ -10,27 +10,11 @@
 		}
 	</style>
 	<?php
-		function images($dir) {
-		$files1 = scandir($dir);
-		foreach ($files1 as $x=>$value)
-		{
-			if ($value == "." || $value == ".."){
-				unset($files1[$x]);
-			}
-		}
-		foreach ($files1 as $x=>$value)
-		{
-
-			echo "<li><img src=\"photos/$value\"></li>";
-		}
-		}
+		echo "test";
 	?>
 
 </head>
 
 <body>
-	<ul>
-		<?php images (https://github.com/thecreatedempty/images);?>
-	</ul>
 </body>
 </html>
